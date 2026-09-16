@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rose 的常用网站与实用工具">
   <title>Rose 的常用网站</title>
 
   <style>
@@ -26,12 +27,12 @@
     }
 
     h1 {
-      margin-bottom: 8px;
+      margin: 0 0 8px;
       font-size: 34px;
     }
 
     .subtitle {
-      margin-top: 0;
+      margin: 0;
       color: #6b7280;
     }
 
@@ -59,6 +60,11 @@
       box-shadow: 0 16px 36px rgba(31, 41, 55, 0.14);
     }
 
+    .card:focus-visible {
+      outline: 4px solid #93c5fd;
+      outline-offset: 3px;
+    }
+
     .icon {
       display: block;
       margin-bottom: 14px;
@@ -73,8 +79,48 @@
     }
 
     .description {
+      display: block;
       color: #6b7280;
       font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .copy-card {
+      width: 100%;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .command {
+      display: block;
+      margin-top: 12px;
+      padding: 10px;
+      overflow-wrap: anywhere;
+      color: #374151;
+      background: #f3f4f6;
+      border-radius: 10px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco,
+        Consolas, monospace;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 36px;
+      color: #9ca3af;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 520px) {
+      body {
+        padding: 30px 16px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
     }
   </style>
 </head>
@@ -82,62 +128,127 @@
 <body>
   <main>
     <h1>Rose 的常用网站</h1>
-    <p class="subtitle">收藏一些经常使用的网站。</p>
+    <p class="subtitle">收藏一些经常使用的网站与实用工具。</p>
 
     <section class="links">
-  <a
-    class="card"
-    href="http://ipgw.neu.edu.cn/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <span class="icon">🏫</span>
-    <span class="name">东北大学校园网</span>
-    <span class="description">校园网登录与网络服务</span>
-  </a>
+      <a
+        class="card"
+        href="http://ipgw.neu.edu.cn/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="icon">🏫</span>
+        <span class="name">东北大学校园网</span>
+        <span class="description">校园网登录与网络服务</span>
+      </a>
 
-  <a
-    class="card"
-    href="https://tools.pdf24.org/zh/all-tools"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <span class="icon">📄</span>
-    <span class="name">PDF24 工具</span>
-    <span class="description">转换、合并、压缩和编辑 PDF</span>
-  </a>
+      <a
+        class="card"
+        href="https://mails.neu.edu.cn/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="icon">📧</span>
+        <span class="name">NEU 邮箱</span>
+        <span class="description">东北大学校园邮箱</span>
+      </a>
 
-  <a
-    class="card"
-    href="https://pqjc.site/login"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <span class="icon">🌐</span>
-    <span class="name">代理服务</span>
-    <span class="description">代理服务登录与管理</span>
-  </a>
-  <a
-  class="card"
-  href="https://github.com/Rose-mojjomo"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <span class="icon">🐙</span>
-  <span class="name">我的 GitHub</span>
-  <span class="description">查看我的主页和项目</span>
-</a>
-<a
-  class="card"
-  href="https://mails.neu.edu.cn/"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <span class="icon">📧</span>
-  <span class="name">NEU 邮箱</span>
-  <span class="description">东北大学校园邮箱</span>
-</a>
-</section>
+      <a
+        class="card"
+        href="https://tools.pdf24.org/zh/all-tools"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="icon">📄</span>
+        <span class="name">PDF24 工具</span>
+        <span class="description">转换、合并、压缩和编辑 PDF</span>
+      </a>
+
+      <a
+        class="card"
+        href="https://github.com/Rose-mojjomo"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="icon">🐙</span>
+        <span class="name">我的 GitHub</span>
+        <span class="description">查看我的主页和项目</span>
+      </a>
+
+      <a
+        class="card"
+        href="https://pqjc.site/login"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="icon">🌐</span>
+        <span class="name">代理服务</span>
+        <span class="description">代理服务登录与管理</span>
+      </a>
+
+      <a
+        class="card"
+        href="https://idshare001.me/goso.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="icon">🍎</span>
+        <span class="name">共享美区 Apple 账号</span>
+        <span class="description">第三方共享账号页面，请谨慎使用</span>
+      </a>
+
+      <button
+        class="card copy-card"
+        id="copy-ipv6-command"
+        type="button"
+      >
+        <span class="icon">🛜</span>
+        <span class="name">重置 Mac 的 IPv6</span>
+
+        <span
+          class="description"
+          id="copy-ipv6-status"
+          aria-live="polite"
+        >
+          IPv6 节点全部显示 -1 或切换网络后 IPv6 失效时使用，点击复制命令
+        </span>
+
+        <code class="command">
+          sudo networksetup -setv6off "Wi-Fi"<br>
+          sudo networksetup -setv6automatic "Wi-Fi"
+        </code>
+      </button>
+    </section>
+
+    <footer>
+      Rose 的个人导航页
+    </footer>
   </main>
+
+  <script>
+    const copyButton = document.querySelector("#copy-ipv6-command");
+    const copyStatus = document.querySelector("#copy-ipv6-status");
+
+    const defaultMessage =
+      "IPv6 节点全部显示 -1 或切换网络后 IPv6 失效时使用，点击复制命令";
+
+    const ipv6Commands = `sudo networksetup -setv6off "Wi-Fi"
+sudo networksetup -setv6automatic "Wi-Fi"`;
+
+    copyButton.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(ipv6Commands);
+        copyStatus.textContent =
+          "复制成功，请粘贴到 macOS 终端中执行";
+
+        setTimeout(() => {
+          copyStatus.textContent = defaultMessage;
+        }, 3000);
+      } catch {
+        copyStatus.textContent =
+          "复制失败，请手动选择下方命令";
+      }
+    });
+  </script>
 </body>
 </html>
